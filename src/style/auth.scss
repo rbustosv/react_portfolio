@@ -1,0 +1,36 @@
+.auth-page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 84px);
+    //Rendering image only in the space left between 
+    //the view hight of the screen less the hight of the navbar
+
+    .left-column {
+        background-size: cover;
+    }
+
+    .right-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $offwhite;
+
+    .auth-form-wrapper {
+        @include input-element();
+        @include base-grid();
+        grid-gap: 21px;
+        padding: 42px;
+
+    .form-group {
+        display: flex;
+        
+        svg {//styling icons as svg and not text
+            font-size: 2em;
+            color: $pink;
+            margin-right: 15px;
+        }
+        }
+
+    }    
+    }
+}

@@ -1,0 +1,65 @@
+@mixin base-btn {
+    cursor: pointer;
+    height: 42px;
+    font-size: 1em;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: all 0.5 ease-in-out;
+    background-color: $pink;//teal
+    color: white;//#F1FFE7;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: $dark-pink;//dark-teal
+    }
+}
+
+@mixin input-element {
+    input {
+      font-family: "Titillium Web", sans-serif;
+      color: $charcoal;
+      padding: 5px 0px;
+      width: 100%;
+      border-top: 0px;
+      border-right: 0px;
+      border-left: 0px;
+      border-bottom: 1px solid $pink;//teal
+      background-color: transparent;
+      transition: 0.5s all ease-in-out;
+      font-size: 1.1em;
+      margin-bottom: 21px;
+
+      &:focus {
+          outline: none;
+          border-bottom: 1px solid $dark-pink;//dark-teal
+      }
+    }
+  }
+
+  @mixin base-grid() {
+    display: grid;
+    grid-gap: 21px;
+  }
+
+  @mixin base-manager-image-wrapper {
+    img {
+      width: 100%;//100% size of the grid (each grid column has 200px)
+      height: 120px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .image-removal-link{
+      display: flex;
+      justify-content: center;
+      a{
+        font-weight: 900;
+        color: $warning;
+        cursor: pointer;
+      }
+    }
+    
+  }

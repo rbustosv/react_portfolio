@@ -1,0 +1,37 @@
+.portfolio-form-wrapper {
+    @include base-grid();
+    grid-template-columns: 1fr;
+    padding: 42px;
+
+    @include input-element();
+    input {
+      margin-bottom: 0px;
+      /*overwriting margin botton of portfolioName and URl
+      so the select item is align with position in the second div*/
+    }
+    
+    .image-uploaders{
+      @include base-grid();
+      grid-template-columns: 200px 200px 200px;//3 columns 200px wide each one
+      @include base-manager-image-wrapper();
+
+      /*.portfolio-manager-image-wrapper{
+        img {
+          width: 100%;//100% size of the grid (each grid column has 200px)
+          height: 120px;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+        .image-removal-link{
+          display: flex;
+          justify-content: center;
+          a{
+            font-weight: 900;
+            color: $warning;
+            cursor: pointer;
+          }
+        }
+      }*/
+
+    }
+  }

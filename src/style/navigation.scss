@@ -1,0 +1,48 @@
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+    .right-side {
+        a{
+            margin-left: 15px;//to give some space to the icon text link log out
+            cursor: pointer;
+            color: $pink;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+                color: $dark-pink;//dark-teal
+            }
+        }
+    }
+    .left-side {
+        display: flex;
+    }
+
+    .nav-link-wrapper {
+        height: 22px;
+        border-bottom: 1px solid transparent;
+        transition: 0.5s ease-in-out;
+
+        margin-right: 20px;//to give some space between the links
+        text-transform: uppercase; //to make uppercase all the text links
+        font-size: 0.9rem;
+
+        a {
+            color: $grey;
+            text-decoration: none;
+            &:hover {
+                color: black;
+            }
+        }
+
+        &:hover {
+            border-bottom: 1px solid $dark-pink;//black
+        }
+
+        .nav-link-active {
+            border-bottom: 1px solid $dark-pink;//black
+                color: black;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.portfolio-sidebar-list-wrapper {
+    .portfolio-item-thumb {
+      padding: 21px;
+  
+      .portfolio-thumb-img img {
+        width: 100%;
+      }
+  
+      .text-content{
+        display: flex;//so title and icon trash are in the same line
+        justify-content: space-between;
+        align-items: center; //vertically
+
+        .title {
+          color: $offwhite;
+          font-size: 1.5em;
+        }
+
+        .actions {
+
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 15px;
+          
+          .action-icon{//trash and edit icon
+            cursor: pointer;//so the icon texts will look with a pointer so it is clickable
+            color: $offwhite;
+            font-size: 1.5em;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+              color: $warning;
+            }
+
+          }
+        }  
+      }  
+    }
+  }

@@ -1,0 +1,67 @@
+.blog-container {
+    display: flex;
+    flex-direction: column;//all the content is stacked on top of each other (one column)
+    align-items: center;
+    position: relative;
+
+    .admin-blog-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        margin-left: 15px;
+        cursor: pointer;
+      }
+    }
+  
+    .new-blog-link {
+      position: fixed;//absolute;//to use absolute position we need to make parent relative ^
+      right: 0;
+      //top: 0;
+      bottom: 0;//this combined with fixed keep the icon in the same position even when user scrolls
+
+      a {
+        font-size: 3em;
+        cursor: pointer;
+        color: $pink;//$primary;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        transition: 0.5s ease-in-out;
+    
+        &:hover {
+          color: $dark-pink;//$dark-teal;
+        }
+      }
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      width: 800px;
+
+      a {
+        text-decoration: none;
+        color: $pink;//$teal;
+        transition: 0.5s ease-in-out;
+      
+        &:hover {
+          color: $dark-pink;//$dark-teal;
+        }
+      }
+
+      h1 {
+          font-size: 1.5em;
+      }
+  
+      .featured-image-wrapper {
+        img {
+          margin: 15px 0px;
+          width: 100%;
+          height: 350px;
+          border-radius: 5px;
+          object-fit: cover;//allows img be centered
+        }
+      }
+    }
+  }
