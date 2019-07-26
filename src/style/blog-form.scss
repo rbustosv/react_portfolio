@@ -11,7 +11,7 @@
     .image-uploaders {
       @include base-grid();
       grid-template-columns: 200px;
-      @include base-manager-image-wrapper();
+      @include base-manager-image-wrapper();//for images in dropzone
     }
     
   }
